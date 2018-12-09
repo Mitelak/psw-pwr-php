@@ -1,0 +1,97 @@
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+}
+
+a, a:hover {
+    color: var(--primary-color);
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.register-form {
+    width: 350px;
+    margin: 0 auto;
+}
+
+.form-field {
+    height: 65px;
+    position: relative;
+}
+
+.form-field label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-field input, .form-field select {
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    flex-basis: 210px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid var(--input-border-color);
+    background: var(--input-bg-color);
+    color: var(--input-text-color);
+    padding: 0 10px;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+    color: var(--input-placeholder-color);
+ }
+
+ .form-err {
+     color: #a31515;
+     font-size: 12px;
+ }
+
+.form-field > p.form-err {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.form-field-rules {
+    display: flex;
+    align-items: center;
+}
+
+.form-field-rules label, .form-field-rules div {
+    margin-right: 15px;
+}
+
+.form-btn {
+    display: block;
+    height: 35px;
+    background: var(--primary-color);
+    color: var(--primary-text-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.topbar {
+    background: var(--primary-color);
+    color: var(--primary-text-color);
+    height: 50px;
+}
+
+.topbar .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topbar a {
+    color: var(--primary-text-color);
+}
+
