@@ -21,8 +21,9 @@ a, a:hover {
 }
 
 .form-field {
-    height: 65px;
+    /* height: 65px; */
     position: relative;
+    padding-bottom: 30px;
 }
 
 .form-field label {
@@ -31,7 +32,7 @@ a, a:hover {
     align-items: center;
 }
 
-.form-field input, .form-field select {
+.form-field input, .form-field select, .form-field textarea {
     box-sizing: border-box;
     font-family: Helvetica, sans-serif;
     flex-basis: 210px;
@@ -41,6 +42,11 @@ a, a:hover {
     background: var(--input-bg-color);
     color: var(--input-text-color);
     padding: 0 10px;
+}
+
+.form-field textarea {
+    height: 100px;
+    resize: none;
 }
 
 ::placeholder { /* Most modern browsers support this now. */
@@ -94,4 +100,3 @@ a, a:hover {
 .topbar a {
     color: var(--primary-text-color);
 }
-

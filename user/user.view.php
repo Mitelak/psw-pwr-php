@@ -7,12 +7,7 @@
 ?>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container">
-      <span class="user">Użytkownik: <?php echo $_SESSION['login']; ?></span>
-      <a href="../resources/logout.php">Wyloguj</a>
-    </div>
-  </header>
+  <?php include_once '../assets/template/topbar.html.php'; ?>
   <form method="POST" class="register-form">
     <h1>USER</h1>
     <div class="form-field">

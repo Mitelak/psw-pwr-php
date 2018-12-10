@@ -1,15 +1,15 @@
 <?php
   include '../resources/is_logged.php';
   include_once "../resources/db_connect.inc.php";
-  
+
   try {
     $query = $pdo -> prepare('SELECT login, email, licence, password FROM users WHERE login = :login');
     $query -> execute(['login' => $_SESSION['login']]);
-    $user = $query -> fetch(); 
+    $user = $query -> fetch();
 
     if ($user > 0) {
 
-      
+
     } else {
       // $is_error = true;
       echo 'blad';
@@ -35,7 +35,7 @@
       }
     }
 
-    
+
     $new_password = $user['password'];
 
     if(isset($_POST['password']) || isset($_POST['confirm_password'])){
@@ -53,7 +53,7 @@
 
         if(isset($_POST['mode']) && $_POST['mode'] != ''){
           setcookie('mode', $_POST['mode'], time() + 86400 * 365, '/');
-          header('Location: .');
+          header('Location: /user ');
         }
       } catch (PDOException $e) {
         if((int)$e->getCode() == 23000) {
