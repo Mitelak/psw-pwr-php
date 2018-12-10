@@ -27,6 +27,7 @@
         <input type="email" name="email" value="<?php echo isset($user['email']) ? htmlspecialchars($user['email']) : '' ?>" />
       </label>
       <?php  echo in_array('email', $errors) ? '<p class="form-err">' . $VALIDATIONS_STRINGS['email'] . '</p>' : ''; ?>
+      <?php  echo in_array('email_exists', $errors) ? '<p class="form-err">' . $VALIDATIONS_STRINGS['email_exists'] . '</p>' : ''; ?>
     </div>
     <div class="form-field">
       <label>
@@ -45,7 +46,6 @@
       <label>
         Licencja:
         <select id="licence" name="licence">
-            <option value="">--Please choose an option--</option>
             <?php
               foreach($LICENCES as $licence) {
                 echo ("<option value=\"" . $licence . "\""
