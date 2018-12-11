@@ -11,17 +11,15 @@ a, a:hover {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
 .register-form {
-    width: 350px;
-    margin: 0 auto;
+    max-width: 400px;
 }
 
 .form-field {
-    /* height: 65px; */
     position: relative;
     padding-bottom: 30px;
 }
@@ -35,7 +33,7 @@ a, a:hover {
 .form-field input, .form-field select, .form-field textarea {
     box-sizing: border-box;
     font-family: Helvetica, sans-serif;
-    flex-basis: 210px;
+    flex-basis: 230px;
     height: 35px;
     border-radius: 5px;
     border: 1px solid var(--input-border-color);
@@ -81,7 +79,7 @@ a, a:hover {
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    margin: 0 auto;
+    margin: 0 0 0 auto;
 }
 
 .topbar {
@@ -99,4 +97,34 @@ a, a:hover {
 
 .topbar a {
     color: var(--primary-text-color);
+}
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post {
+    background: var(--post-bg-color);
+    margin: 5px;
+    padding: 15px;
+    flex-basis: 200px;
+}
+
+.post p {
+    margin: 0;
+}
+
+.post-title {
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.post-author {
+    text-align: right;
+    padding-top: 10px;
+}
+
+.post-author:before {
+    content: '~ ';
 }

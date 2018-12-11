@@ -17,7 +17,6 @@
       $query = $pdo -> prepare('SELECT login, password FROM users WHERE login = :login');
       $query -> execute(['login' => $_POST['login']]);
       $result = $query -> fetch(); 
-
       if ($result > 0 && password_verify($_POST['password'], $result['password'])) {
         $_SESSION['login'] = $_POST['login'];
         header('Location: /user');
