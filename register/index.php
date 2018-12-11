@@ -66,7 +66,7 @@
         $result = $query -> execute();
 
         if ($result > 0) {    
-          header('Location: /user');
+          header('Location: /login');
           die();
         } else {
           echo 'Wystąpił błąd podczas rejestracji';

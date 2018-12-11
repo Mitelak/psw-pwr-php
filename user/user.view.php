@@ -54,6 +54,7 @@
         </label>
       </div>
       <input type="hidden" name="action" value="update_data">
+      <?php  echo in_array('fields', $errors) ? '<p class="form-err">' . $VALIDATIONS_STRINGS['fields'] . '</p>' : ''; ?>
       <button type="submit" class="form-btn">Aktualizuj dane</button>
     </form>
     <form method="POST" class="register-form">

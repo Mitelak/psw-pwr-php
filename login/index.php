@@ -5,7 +5,7 @@
   $is_error = false;
 
   if(isset($_SESSION['login'])) {
-    header('Location: /user'); //TODO: zaktualizowac strone na ktora przekieruje
+    header('Location: /'); //TODO: zaktualizowac strone na ktora przekieruje
   }
 
   if (isset($_POST['login']) && $_POST['login']
@@ -19,7 +19,7 @@
       $result = $query -> fetch(); 
       if ($result > 0 && password_verify($_POST['password'], $result['password'])) {
         $_SESSION['login'] = $_POST['login'];
-        header('Location: /user');
+        header('Location: /');
         die();
       } else {
         $is_error = true;
